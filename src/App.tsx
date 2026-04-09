@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAppState } from "@/store/appStore";
 import BottomNav from "@/components/BottomNav";
+import GlobalBackButton from "@/components/GlobalBackButton";
 import SplashScreen from "@/pages/SplashScreen";
 import Onboarding from "@/pages/Onboarding";
 import ProfileSetup from "@/pages/ProfileSetup";
@@ -40,7 +41,8 @@ function AppContent() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
+        <GlobalBackButton />
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard userName={state.userName} />} />
