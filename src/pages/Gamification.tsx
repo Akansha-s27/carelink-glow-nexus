@@ -1,4 +1,5 @@
 import { Trophy, Medal, Star, Flame, Shield, Zap } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const badges = [
   { icon: Shield, label: 'First Responder', desc: 'Completed 10 urgent tasks', earned: true, color: 'text-neon-blue' },
@@ -19,6 +20,9 @@ const leaderboard = [
 export default function Gamification() {
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-2 mb-6">
           <Trophy className="w-5 h-5 text-neon-yellow" />

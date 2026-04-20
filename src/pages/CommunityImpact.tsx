@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Heart, CheckCircle, Users, TrendingUp } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const counters = [
   { label: 'People Helped', value: 12847, icon: Heart, color: 'text-neon-blue', prefix: '' },
@@ -22,6 +23,9 @@ export default function CommunityImpact() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-1">Community Impact</h1>
         <p className="text-xs text-muted-foreground mb-6">Real-time humanitarian impact metrics</p>

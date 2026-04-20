@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAppState } from "@/store/appStore";
 import BottomNav from "@/components/BottomNav";
 import GlobalBackButton from "@/components/GlobalBackButton";
+import PageTransition from "@/components/PageTransition";
 import SplashScreen from "@/pages/SplashScreen";
 import Onboarding from "@/pages/Onboarding";
 import ProfileSetup from "@/pages/ProfileSetup";
@@ -43,22 +44,24 @@ function AppContent() {
     <BrowserRouter>
       <div className="min-h-screen bg-background flex flex-col">
         <GlobalBackButton />
-        <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/dashboard" element={<Dashboard userName={state.userName} />} />
-          <Route path="/heatmap" element={<Heatmap />} />
-          <Route path="/report" element={<ReportIssue />} />
-          <Route path="/matching" element={<SmartMatching />} />
-          <Route path="/notifications" element={<Notifications notifications={state.notifications} onRead={markNotificationRead} />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/command" element={<CommandCenter />} />
-          <Route path="/community" element={<CommunityImpact />} />
-          <Route path="/gamification" element={<Gamification />} />
-          <Route path="/predictions" element={<Predictions />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/more" element={<MoreMenu />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="/dashboard" element={<Dashboard userName={state.userName} />} />
+            <Route path="/heatmap" element={<Heatmap />} />
+            <Route path="/report" element={<ReportIssue />} />
+            <Route path="/matching" element={<SmartMatching />} />
+            <Route path="/notifications" element={<Notifications notifications={state.notifications} onRead={markNotificationRead} />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/command" element={<CommandCenter />} />
+            <Route path="/community" element={<CommunityImpact />} />
+            <Route path="/gamification" element={<Gamification />} />
+            <Route path="/predictions" element={<Predictions />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/more" element={<MoreMenu />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </PageTransition>
         <BottomNav />
       </div>
     </BrowserRouter>

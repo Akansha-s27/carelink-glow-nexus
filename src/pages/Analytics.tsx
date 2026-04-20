@@ -1,4 +1,5 @@
 import { BarChart3, TrendingUp, MapPin, Brain } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const areaData = [
   { zone: 'Zone 1', issues: 45, resolved: 38, active: 7 },
@@ -19,6 +20,9 @@ export default function Analytics() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-1">Analytics</h1>
         <p className="text-xs text-muted-foreground mb-6">NGO resource intelligence dashboard</p>
