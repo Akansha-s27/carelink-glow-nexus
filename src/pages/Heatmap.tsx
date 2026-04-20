@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { X, MapPin, Users, AlertTriangle, CheckCircle } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 interface Hotspot {
   id: number;
@@ -31,6 +32,9 @@ export default function Heatmap() {
 
   return (
     <div className="min-h-screen pb-24">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="px-4 pt-6 mb-4">
         <h1 className="font-heading text-xl font-bold text-foreground">Live Heatmap</h1>
         <p className="text-xs text-muted-foreground">Tap hotspots for details</p>

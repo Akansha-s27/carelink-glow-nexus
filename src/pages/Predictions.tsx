@@ -1,4 +1,5 @@
 import { Brain, TrendingUp, AlertTriangle, MapPin } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const riskZones = [
   { zone: 'Zone 4', risk: 92, type: 'Flooding', trend: 'Critical - Rising', days: '2-3 days' },
@@ -17,6 +18,9 @@ const trends = [
 export default function Predictions() {
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-2 mb-1">
           <Brain className="w-5 h-5 text-secondary" />

@@ -1,5 +1,6 @@
 import { AlertTriangle, ClipboardList, Info, Bell } from 'lucide-react';
 import type { Notification } from '@/store/appStore';
+import BackButton from '@/components/BackButton';
 
 const iconMap = {
   emergency: AlertTriangle,
@@ -20,6 +21,9 @@ interface Props {
 export default function Notifications({ notifications, onRead }: Props) {
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-2 mb-6">
           <Bell className="w-5 h-5 text-primary" />

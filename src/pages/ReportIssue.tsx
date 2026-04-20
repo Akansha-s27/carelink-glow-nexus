@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Camera, Mic, MapPin, Send, Tag, AlertTriangle } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const categories = ['Medical', 'Food & Water', 'Shelter', 'Infrastructure', 'Safety', 'Other'];
 
@@ -31,6 +32,9 @@ export default function ReportIssue() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-1">Report Issue</h1>
         <p className="text-xs text-muted-foreground mb-6">AI will auto-categorize and prioritize your report</p>

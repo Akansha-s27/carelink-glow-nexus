@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Brain, Zap, ArrowUp, ArrowDown, Radio } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 interface LiveData {
   id: number;
@@ -41,6 +42,9 @@ export default function CommandCenter() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <div className="flex items-center gap-2 mb-1">
           <Brain className="w-5 h-5 text-secondary" />

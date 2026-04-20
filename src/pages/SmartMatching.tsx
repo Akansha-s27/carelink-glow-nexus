@@ -1,5 +1,6 @@
 import { MapPin, Clock, Star, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import BackButton from '@/components/BackButton';
 
 const tasks = [
   { id: 1, title: 'Medical Supply Delivery', zone: 'Zone 4', distance: '1.2 km', match: 96, skills: ['First Aid', 'Driving'], urgency: 'Critical', time: '~30 min' },
@@ -14,6 +15,9 @@ export default function SmartMatching() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-1">Smart Matching</h1>
         <p className="text-xs text-muted-foreground mb-6">AI-matched tasks based on your skills & location</p>

@@ -1,5 +1,6 @@
 import { Globe, Palette, Accessibility, Wifi, WifiOff, Bell, Shield, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import BackButton from '@/components/BackButton';
 
 const languages = ['English', 'Français', 'Español', 'العربية', 'Swahili'];
 
@@ -11,6 +12,9 @@ export default function Settings() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-6">Settings</h1>
 

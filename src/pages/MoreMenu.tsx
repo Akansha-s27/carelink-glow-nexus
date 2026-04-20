@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { BarChart3, Brain, Heart, Trophy, TrendingUp, Settings, Bell, WifiOff } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const items = [
   { path: '/notifications', icon: Bell, label: 'Notifications', desc: 'Alerts & updates', color: 'text-neon-red' },
@@ -16,6 +17,9 @@ export default function MoreMenu() {
 
   return (
     <div className="min-h-screen pb-24 px-4 pt-6">
+      {/* Back Button */}
+      <BackButton />
+      
       <div className="max-w-lg mx-auto">
         <h1 className="font-heading text-xl font-bold text-foreground mb-6">More</h1>
         <div className="space-y-2">
